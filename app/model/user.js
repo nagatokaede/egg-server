@@ -2,7 +2,7 @@
 
 module.exports = app => {
   const mongoose = app.mongoose
-  
+
   const UserSchema = mongoose.Schema({
     username: { type: String, unique: true, required: true },
     mobile: { type: String, unique: true, required: true },
@@ -12,6 +12,6 @@ module.exports = app => {
     extra: { type: mongoose.Schema.Types.Mixed },
     createdAt: { type: Date, default: Date.now }
   })
-  
+
   return mongoose.model('User', UserSchema)
 }

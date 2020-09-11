@@ -1,6 +1,7 @@
 {
   "extends": "eslint-config-egg",
   "rules": {
-    "semi": [0]
+    "semi": [0],
+    "comma-dangle": "off"
   }
 }

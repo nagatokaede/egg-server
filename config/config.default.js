@@ -16,8 +16,8 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1599298866691_8552';
 
   // add your middleware config here
-  config.middleware = ['errorHandler']
-  
+  config.middleware = [ 'errorHandler' ]
+
   config.swaggerdoc = {
     dirScanner: './app/controller',
     appInfo: {
@@ -33,7 +33,7 @@ module.exports = appInfo => {
     routerMap: true,
     enable: true
   }
-  
+
   config.mongoose = {
     url: 'mongodb://127.0.0.1:15498/egg-server',
     options: {
@@ -44,6 +44,12 @@ module.exports = appInfo => {
       useUnifiedTopology: true,
       useCreateIndex: true
     },
+  }
+
+  config.jwt = {
+    secret: 'Great4-M',
+    enable: true, // default is false
+    match: /^\/api/, // optional
   }
 
   // add your user.js config here
